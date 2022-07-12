@@ -1,0 +1,11 @@
+.nav {
+  background-color: #012030;
+  font-size: 18px; 
+}
+
+.centro {
+  height: 500px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
