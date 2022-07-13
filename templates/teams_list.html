@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Teams List</title>
+{% endblock title %}
+
+{% block text_header %}
+<h1>Teams List</h1>
+{% endblock text_header %}
+
+{% block function %}
+<div class="create-team">
+    <a href={% url 'create_team' %}>Create Team</a>
+</div>
+
+<div>
+    <form action={% url 'teams_list' %}>
+        {{form}}
+        <button>Search</button>
+    </form>
+</div>
+
+<div>
+    {% if teams_list %}
+    <ul>
+        {% for team in teams_list %}
+        <li>{{team}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    No teams to display.
+    {% endif %}
+</div>
+{% endblock function %}
