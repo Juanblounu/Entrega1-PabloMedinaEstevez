@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Delete Team</title>
+{% endblock title %}
+
+{% block text_header %}
+<h1>Delete Team</h1>
+{% endblock text_header %}
+
+{% block function %}
+<p>
+    <a href={% url 'teams_list' %}>Volver</a>
+</p>
+
+<div>
+    <form action={% url 'delete_team' object.id %} method="post">
+        {% csrf_token %}
+        Are you sure that you want to delete this team?
+        <button>Confirm</button>
+    </form>
+</div>
+{% endblock function %}

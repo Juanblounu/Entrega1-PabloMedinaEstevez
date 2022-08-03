@@ -1,22 +1,24 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Create Team</title>
+<title>Login</title>
 {% endblock title %}
 
 {% block text_header %}
-<h1>It's time to creat your own team!</h1>
+<h1>Login</h1>
 {% endblock text_header %}
 
 {% block function %}
-<div class="create-team">
-    <form action={% url 'create_team' %} method="post">
+<p>
+    <a href={% url 'index' %}>Volver</a>
+</p>
+<div>
+    <form action={% url 'login' %} method="post">
         {% csrf_token %}
         <table>
-            {{form.media}}
             {{form.as_table}}
         </table>
-        <button id="team-button">Create</button>
+        <button>Confirm</button>
     </form>
 </div>
 {% endblock function %}

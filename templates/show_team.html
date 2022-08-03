@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Team</title>
+{% endblock title %}
+
+{% block text_header %}
+<h1>
+    Team: {{team.team_name}}
+</h1>
+{% endblock text_header %}
+
+{% block function %}
+<p>
+    <a href={% url 'teams_list' %}>Return</a>
+</p>
+<div>
+    <ul>
+        <li>
+            <b>Name of the team:</b> {{team.team_name}}
+        </li>
+        <li>
+            <b>Best Player:</b> {{team.principal_player}}
+        </li>
+        <li>
+            <b>Description:</b> {{team.description | safe}}
+        </li>
+        <li>
+            <b>Creation date:</b> {{team.creation_date}}
+        </li>
+    </ul>
+</div>
+{% endblock function %}

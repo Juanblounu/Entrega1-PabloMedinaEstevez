@@ -13,22 +13,32 @@
     <a href={% url 'create_team' %}>Create Team</a>
 </div>
 
-<div>
+<div class="searcher">
     <form action={% url 'teams_list' %}>
         {{form}}
         <button>Search</button>
     </form>
 </div>
 
-<div>
-    {% if teams_list %}
-    <ul>
-        {% for team in teams_list %}
-        <li>{{team}}</li>
+    {% if object_list %}
+        {% for team in object_list %}
+            <div class="clash-card">
+                <div class="clash-card__image clash-card__image--barbarian">
+                    {% if team.image %}
+                    <img src={{team.image.url}} alt="barbarian" />
+                    {% endif %}
+                </div>
+                <div class="clash-card__level clash-card__level--barbarian">{{team.principal_player}}</div>
+                <div class="clash-card__unit-name">{{team}}</div>
+                <div class="clash-card__unit-description">
+                    {% comment %} The Barbarian is a kilt-clad Scottish warrior with an angry, battle-ready expression, hungry for destruction. He has Killer yellow horseshoe mustache. {% endcomment %}
+                    <a href={% url 'show_team' team.id %}>Show Team</a>
+                    <a href={% url 'edit_team' team.id %}>Edit</a>
+                    <a href={% url 'delete_team' team.id %}>Delete</a>
+                </div>
+            </div> <!-- end clash-card barbarian-->
         {% endfor %}
-    </ul>
     {% else %}
     No teams to display.
     {% endif %}
-</div>
 {% endblock function %}
