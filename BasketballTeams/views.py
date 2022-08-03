@@ -30,6 +30,7 @@ def create_team(request):
                 image=data.get('image'),
                 creation_date=fecha
             )
+            
             team.save()
             return redirect('teams_list')
         

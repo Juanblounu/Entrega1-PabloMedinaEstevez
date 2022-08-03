@@ -14,7 +14,7 @@
 <p>
     <a href={% url 'teams_list' %}>Return</a>
 </p>
-<div>
+<div class='show-team'>
     <ul>
         <li>
             <b>Name of the team:</b> {{team.team_name}}
@@ -25,6 +25,11 @@
         <li>
             <b>Description:</b> {{team.description | safe}}
         </li>
+        <li>
+            <b>Image:</b> <br>
+            <img id="imgshow" src="{{team.image.url}}" alt="barbarian" />
+        </li>
+        <br>
         <li>
             <b>Creation date:</b> {{team.creation_date}}
         </li>

@@ -23,9 +23,9 @@
     {% if object_list %}
         {% for team in object_list %}
             <div class="clash-card">
-                <div class="clash-card__image clash-card__image--barbarian">
+                <div class="clash-card__image">
                     {% if team.image %}
-                    <img src={{team.image.url}} alt="barbarian" />
+                    <img id="imgcard" src="{{team.image.url}}" alt="barbarian" />
                     {% endif %}
                 </div>
                 <div class="clash-card__level clash-card__level--barbarian">{{team.principal_player}}</div>

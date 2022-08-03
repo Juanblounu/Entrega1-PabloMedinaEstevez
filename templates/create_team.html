@@ -10,7 +10,7 @@
 
 {% block function %}
 <div class="create-team">
-    <form action={% url 'create_team' %} method="post">
+    <form action={% url 'create_team' %} method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <table>
             {{form.media}}

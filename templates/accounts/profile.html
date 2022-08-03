@@ -11,13 +11,13 @@
 {% endblock text_header %}
 
 {% block function %}
-<div>
+<div class='profile-view'>
     <ul>
-        <li>Name: {{request.user.first_name}}</li>
-        <li>Last Name: {{request.user.last_name}}</li>
-        <li>Email: {{request.user.email}}</li>
+        <li><b>Name:</b> {{request.user.first_name}}</li>
+        <li><b>Last Name:</b> {{request.user.last_name}}</li>
+        <li><b>Email:</b> {{request.user.email}}</li>
         <li>
-            <p>Avatar:</p>
+            <p><b>Avatar:</b></p>
             {% if request.user.masdatosusuario.avatar %}
             <img src={{request.user.masdatosusuario.avatar.url}} alt="" height="200px">
             {% endif %}

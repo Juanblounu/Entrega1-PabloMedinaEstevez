@@ -32,17 +32,18 @@ body {
   padding-left: 5%;
 }
 
+.create-team {
+  font-size: 20px;
+}
+
 .searcher {
   margin-bottom: 100px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #team-button {
   margin-top: 20px;
-}
-
-.container-cards {
-  background-color: #012030;
-  width: 100px;
 }
 
 .clash-card {
@@ -59,21 +60,29 @@ body {
 }
 
 .clash-card__image {
-  position: relative;
-  height: 230px;
+  /* position: relative; */
+  height: 216px;
+  width: 300px;
+  max-width: 300px;
   margin-bottom: 35px;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;
 }
 
-.clash-card__image--barbarian {
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+#imgcard {
+  height: 216px;
+  max-width: 300px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
 }
-.clash-card__image--barbarian img {
-  width: 400px;
-  position: absolute;
-  top: -65px;
-  left: -70px;
+
+#imgshow {
+  height: 216px;
+  max-width: 300px;
+}
+
+.show-team {
+  padding: 10px;
 }
 
 .clash-card__level {
@@ -155,3 +164,7 @@ body {
   right: 100px;
   z-index: 999;
 }/*# sourceMappingURL=style.css.map */
+
+.profile-view {
+  font-size: 20px;
+}
